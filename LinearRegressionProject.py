@@ -29,14 +29,6 @@ city.head()
 
 city.columns
 
-# full_data = df.fillna({
-#     'Outlook' : df['Outlook'].mode().loc[0],
-#     'Tempreture' : df['Tempreture'].mean(),
-#     'Humidity' : df['Humidity'].mean(),
-#     'Wind' : df['Wind'].mode().loc[0]
-# })
-# full_data
-
 feature.columns
 
 election.columns
@@ -79,23 +71,6 @@ data.isna().sum() #count the number of NAN in each column
 
 data.head()
 
-# for i in range(1,1220):
-#   if feature['yshuv_symbol'] == i :
-#     feature['Totalpop16'] =
-
-# election['Totalpop'] = 0
-# value = city[city['yshuv_symbol'] == 175]]
-# election.loc[election['yshuv_symbol'] == 175,'Totalpop'] = value
-
-feature.loc[feature['yshuv_symbol']==473]
-
-city.loc[city['yshuv_symbol']==473]
-
-data.columns
-
-data.head()
-
-data.iloc[:,:6]
 
 imputer = SimpleImputer(missing_values=np.nan,strategy='mean')
 imputer.fit(data.iloc[:,6:])
@@ -116,19 +91,14 @@ plt.plot(data['yshuv_symbol'],data['The_Center_Bloc'],'.y')
 plt.xlabel("Yshuv Symbol")
 plt.ylabel("Kosher Votes")
 
-plt.plot(data['yshuv_symbol'],data['Kosher'])
-plt.plot(data['yshuv_symbol'],data['Kosher'],'.r')
-plt.xlabel("Yshuv Symbol")
-plt.ylabel("Kosher Votes")
+# data[['yshuv_symbol']].boxplot()
 
-data[['yshuv_symbol']].boxplot()
+# data[['The_Right_Bloc']].boxplot()
 
-data[['The_Right_Bloc']].boxplot()
+# scaler =  MinMaxScaler()
+# data_scaled = scaler.fit(data)
+# data.describe()
 
-scaler =  MinMaxScaler()
-data_scaled = scaler.fit(data)
-data.describe()
+# data.describe()
 
-data.describe()
-
-data_scaled
+# data_scaled
